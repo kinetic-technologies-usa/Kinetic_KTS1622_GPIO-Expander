@@ -1,0 +1,15 @@
+/dts-v1/;
+/plugin/;
+
+&i2c1 {
+    #address-cells = <1>;
+    #size-cells = <0>;
+    kts1622_20: kts1622@20 {
+        compatible = "kinetic_technologies,kts1622";
+        reg = <0x20>;
+        interrupt-parent = <&gpio>;
+        interrupts = <17 2>; // Raspberry Pi GPIO17 with falling edge trigger
+        gpio-controller;
+        #gpio-cells = <2>;
+    };
+};
