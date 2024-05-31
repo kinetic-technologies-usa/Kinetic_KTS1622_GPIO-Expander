@@ -179,7 +179,7 @@ $ cat /sys/class/gpio/gpio300/value
 0 --> input low
 ```
 
-### Setting the pull-up or pull-down resistor (not verified instruction)
+### Setting the pull-up or pull-down resistor
 This procedure requires 'libgpiod'. You can install libgpiod using following commands.
 ```
 $ sudo apt install gpiod libgpiod-dev
@@ -196,7 +196,7 @@ $ sudo gpioset gpiochip3 --bias=pull-up 0=0
 for more details about gpiolibd, refer this document.
 [Debian gpiod](https://manpages.debian.org/experimental/gpiod/gpioset.1.en.html)
 
-### GPIO open-drain output (not implemented yet)
+### GPIO open-drain output
 It’s possible to set open-drain mode using libgpiod. As an example, the “gpioset” command for setting pin0 as the open-drain output pin.
 ```
 $ gpioset --drive=open-drain 0=0
