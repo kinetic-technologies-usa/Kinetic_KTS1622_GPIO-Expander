@@ -1,5 +1,6 @@
 # gpio-kts1622 - Linux Driver
 KTS1622 16-bit GPIO expander driver for Linux.
+Datasheet: [https://www.kinet-ic.com/kts1622/](https://www.kinet-ic.com/kts1622/)
 ## Device Description
 KTS1622 is a 16-bit general-purpose I/O expander via the 
 I2C bus for microcontrollers when additional I/Os are 
