@@ -26,7 +26,7 @@ program four drive strengths of the output stage to optimize
 the rise/fall times. 
 
 ## Instructions
-Find [README](https://github.com/kinetic-technologies-usa/Kinetic_KTS1622_GPIO-Expander/src) in src directory.
+Find [README](https://github.com/kinetic-technologies-usa/Kinetic_KTS1622_GPIO-Expander/tree/main/src) in src directory.
 
 ## Release note
 ### Revision 3.0.1 - 5/30/2024
