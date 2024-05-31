@@ -36,16 +36,23 @@ Function | Tested with | Note
 ---|---|---
 GPIO push-pull output | (1) Kernel 5.4 with sysfs, (2) Kernel 5.5 and libgpiod v1.5, (3) Kernel 5.10.92 and libgpiod v1.6.2
 GPIO input read | (1) Kernel 5.4 with sysfs, (2) Kernel 5.5 and libgpiod v1.5, (3) Kernel 5.10.92 and libgpiod v1.6.2
-Pull-up, Pull-down resistor | (1) Kernel 5.5 and libgpiod v1.5, (2) Kernel 5.10.92 and libgpiod v1.6.2
-GPIO open-drain output | (1) Kernel 5.5 and libgpiod v1.5, (2) Kernel 5.10.92 and libgpiod v1.6.2
-IRQ/Interrupt generation | (1) Kernel 5.5 and libgpiod v1.5, (2) Kernel 5.10.92 and libgpiod v1.6.2 | GPIO17 of RPi4 used as IRQ input. Defined in .dts
-### Revision 1.5.0 - 3/28/2024 (not published)
+Pull-up, Pull-down resistor | (1) Kernel 5.5 and libgpiod v1.5, (2) Kernel 5.10.92 and libgpiod v1.6.2 | 5.5 used for libgpiod.
+GPIO open-drain output | (1) Kernel 5.5 and libgpiod v1.5, (2) Kernel 5.10.92 and libgpiod v1.6.2 | 5.5 used for libgpiod.
+IRQ/Interrupt generation | (1) Kernel 5.5 and libgpiod v1.5, (2) Kernel 5.10.92 and libgpiod v1.6.2 | 5.5 used for libgpiod. GPIO17 of RPi4 used as IRQ input. Defined in .dts
+### Revision 1.5.0 - 3/28/2024 (not released)
 * GPIO push-pull output - Tested with Kernel 5.4 on RPi4.
 * GPIO input read   - Tested with Kernel 5.4 on RPi4
 * Pull-up, Pull-down resistor - Implemented but not tested yet due to the environmental issue (RPi4 and the version of libgpiod)
 * GPIO open-drain output- (not implemented)
 
 ## Validation platform
+* Raspberry Pi 3B - 64-bit kernel 5.4.51
+    * Linux Kernel 5.4.51 source:
+      * https://github.com/raspberrypi/linux/archive/refs/tags/raspberrypi-kernel_1.20200819-1.zip
+    * Distribution: [Raspberry Pi OS (Legacy) Lite 64bit](https://www.raspberrypi.com/software/operating-systems/)
+      * Replaced to Kernel 5.4.51 with below command.
+      * $ sudo rpi-update 453e49bdd87325369b462b40e809d5f3187df21d
+
 * Raspberry Pi 4 - 64-bit kernel 5.10.92-v8*
     * Dist image Lite version - Debian Bullseye contains Kernel 5.5.92: [2022-01-28-raspios-bullseye-arm64-lite.zip](https://downloads.raspberrypi.com/raspios_lite_arm64/images/raspios_lite_arm64-2022-01-28/)
     * Linux Kernel 5.5.92: source hash-key [b4145cfaa838049fcc1174d1311a98a854703c29](https://github.com/raspberrypi/rpi-firmware/commit/b4145cfaa838049fcc1174d1311a98a854703c29)
@@ -79,14 +86,6 @@ IRQ/Interrupt generation | (1) Kernel 5.5 and libgpiod v1.5, (2) Kernel 5.10.92 
     $ KERNEL=kernel8
     $ make ARCH=arm64 bcm2712_defconfig
     ```
-
-* Raspberry Pi 3B - 64-bit kernel 5.4.51
-    * Linux Kernel 5.4.51 source:
-      * https://github.com/raspberrypi/linux/archive/refs/tags/raspberrypi-kernel_1.20200819-1.zip
-    * Distribution: [Raspberry Pi OS (Legacy) Lite 64bit](https://www.raspberrypi.com/software/operating-systems/)
-      * Replaced to Kernel 5.4.51 with below command.
-      * $ sudo rpi-update 453e49bdd87325369b462b40e809d5f3187df21d
-
 
 ## Quick instructions
 Note: Please see README.md in the codes directory for more details.
